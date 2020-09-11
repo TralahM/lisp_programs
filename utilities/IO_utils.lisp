@@ -9,7 +9,7 @@
                          (apply #'read-line args)
                          ")"))))
 
-; (readlist)
+;; (readlist)
 ;;; call me "Ed"
 ;;;=> (CALL ME "Ed")
 
@@ -19,7 +19,7 @@
   (apply #'format *query-io* args)
   (read *query-io*))
 
-; (prompt "Enter a number between ~A and ~A. ~%>> " 1 10)
+;; (prompt "Enter a number between ~A and ~A. ~%>> " 1 10)
 ;;;>>> 3
 ;;; => 3
 
@@ -36,7 +36,7 @@
           (return)
           (format *query-io* "~A~%" (funcall fn in))))))
 
-; (break-loop #'eval #'(lambda (x) (eq x :q)) ">> ")
+(break-loop #'eval #'(lambda (x) (eq x :q)) ">> ")
 ;;=> Entering break-loop.
 ;;;>> (+ 2 3)
 ;;;=> 5
