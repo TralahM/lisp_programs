@@ -1,5 +1,5 @@
 ; Functions which search lists
-(defun find2 (fb lst)
+(defun find2 (fn lst)
   (if (null lst)
       nil
       (let ((val (funcall fn (car lst))))
@@ -12,7 +12,7 @@
        (let ((first (car lst)))
          (cond ((funcall test y first) nil)
                ((funcall test x first) lst)
-               (t before x y (cdr lst) :test test)))))
+               (t (before x y (cdr lst) :test test))))))
 ;;; (before 'a 'b '(a)) ; ==> (A)
 
 (defun after (x y lst &key (test #'eql))
@@ -32,7 +32,7 @@
 (defun split-if (fn lst)
   (let ((acc nil))
     (do ((src lst (cdr src)))
-        ((or (nul src) (funcall fn (car src)))
+        ((or (null src) (funcall fn (car src)))
          (values (nreverse acc) src))
       (push (car src) acc))))
 
