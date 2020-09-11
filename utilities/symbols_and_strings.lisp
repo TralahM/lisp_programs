@@ -13,7 +13,7 @@
     (dolist (a args) (princ a s))))
 
 
-; (mkstr pi " pieces of " 'pi) ;===> "3.141592653589793 pieces of PI"
+(mkstr pi " pieces of " 'pi) ;===> "3.141592653589793 pieces of PI"
 
 (defun symb (&rest args)
   (values (intern (apply #'mkstr args))))
@@ -31,4 +31,6 @@
                  (intern (make-string 1 :initial-element c)))
        (symbol-name sym)))
 
-;;; (explode 'bomb);==> (B O M B)
+(explode 'bomb);==> (B O M B)
+
+(explode 'tralahtek)
