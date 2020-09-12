@@ -21,7 +21,6 @@
 
 ;; instead of (delete-if #'oddp lst)
 ;; we would say (funcall (! #'remove-if) #'oddp lst)
-w
 
 ;Memoizing utility
 (defun memoize (fn)
